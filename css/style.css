@@ -353,4 +353,57 @@ h2 {
   padding: 12px 57px;
 }
 
+.section-feedback {
+  padding-top: 122px;
+  padding-bottom: 100px;
+}
+
+.feedback {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 66px;
+}
+.feedback-item {
+  flex: 0 0 47%;
+  max-width: 47%;
+}
+.feedback-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 56px;
+}
+.feedback-thumb {
+  margin-right: 10px;
+}
+.feedback-name__title {
+  font-size: 22px;
+  margin-top: 14px;
+  margin-bottom: 11px;
+}
+.feedback-name__job {
+  font-size: 12px;
+  color: #7f7f82;
+  margin-bottom: 0;
+}
+.feedback-body {
+  font-size: 18px;
+  color: #7f7f82;
+  font-style: italic;
+  padding-left: 28px;
+  line-height: 1.8;
+}
+.feedback-body p {
+  position: relative;
+}
+.feedback-body p::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  background-image: url(../img/Quote.png);
+  width: 39px;
+  height: 39px;
+}
+
 /*# sourceMappingURL=style.css.map */
