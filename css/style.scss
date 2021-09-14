@@ -381,6 +381,7 @@ h2 {
    font-size: 16px;
    text-decoration: none;
    padding: 20px 0;
+   border: none;
 }
 
 .section-banner {
@@ -410,7 +411,7 @@ h2 {
 
 .section-feedback {
    padding-top: 122px;
-   padding-bottom: 100px;
+   padding-bottom: 158px;
 }
 
 .feedback {
@@ -468,5 +469,94 @@ h2 {
             height: 39px;
          }
       }
+   }
+}
+
+.section-advantages {
+   padding-top: 100px;
+   padding-bottom: 82px;
+   background-color: $light;
+}
+
+.advantages {
+   display: flex;
+   justify-content: space-between;
+   text-align: center;
+
+   &__title {
+      font-size: 16px;
+      text-transform: uppercase;
+
+      span {
+         display: block;
+         font-size: 22px;
+         font-weight: 500;
+         margin-bottom: 13px;
+      }
+   }
+
+   &__icon {
+      background-color: $dark;
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+      margin: 0 auto;
+      margin-bottom: 27px;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      &-01 {
+         background-image: url(../img/icon-01.png);
+         background-size: 26px 23px;
+      }
+
+      &-02 {
+         background-image: url(../img/icon-02.png);
+         background-size: 26px 23px;
+      }
+
+      &-03 {
+         background-image: url(../img/icon-03.png);
+         background-size: 26px 24px;
+      }
+
+      &-04 {
+         background-image: url(../img/icon-04.png);
+         background-size: 19px 23px;
+      }
+   }
+}
+
+.section-form {
+   padding-top: 122px;
+   padding-bottom: 100px;
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   max-width: 750px;
+   margin: 45px auto 0;
+
+   &__input,
+   &__textarea {
+      border: none;
+      border-bottom: 1px solid #e1e1e1;
+      font-size: 14px;
+      padding: 17px 25px;
+      text-align: center;
+      margin-bottom: 15px;
+      transition: 0.3s;
+
+      &:focus {
+         outline: none;
+         border-bottom: 1px solid $dark;
+      }
+   }
+
+   &__textarea {
+      padding: 12px 25px;
+      min-height: 86px;
+      margin-bottom: 35px;
    }
 }
