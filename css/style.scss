@@ -16,6 +16,11 @@ body {
    color: $dark;
 }
 
+.lock {
+   height: 100%;
+   overflow: hidden;
+}
+
 .text-center {
    text-align: center;
 }
@@ -28,6 +33,10 @@ body {
    justify-content: space-between;
    padding-top: 39px;
    padding-bottom: 42px;
+
+   @media (max-width: 768px) {
+      padding-top: 20px;
+   }
 }
 
 .wrapper {
@@ -43,6 +52,91 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
+
+   .menu-btn {
+      display: none;
+      width: 30px;
+      height: 30px;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+
+      @media (max-width: 768px) {
+         display: block;
+      }
+
+      span {
+         width: 30px;
+         height: 2px;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         background-color: maroon;
+         transform: translate(-50%, -50%);
+         transition: all 0.5s;
+
+         &:nth-child(2) {
+            top: calc(50% - 5px);
+         }
+
+         &:nth-child(3) {
+            top: calc(50% + 5px);
+         }
+      }
+   }
+
+   .menu-btn.active {
+
+      span {
+         &:first-child {
+            transform: translateX(100%);
+         }
+
+         &:nth-child(2) {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+         }
+
+         &:nth-child(3) {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+         }
+      }
+   }
+
+   .main-menu {
+      @media (max-width: 768px) {
+         display: none;
+      }
+   }
+}
+
+.menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   padding: 20px;
+   background-color: #e1e1e1;
+   z-index: 1;
+   transform: translateX(-100%);
+   transition: transform 0.5s;
+
+   li {
+      list-style-type: none;
+      font-size: 24px;
+      margin-bottom: 15px;
+
+      a {
+         text-decoration: none;
+         color: maroon;
+      }
+   }
+}
+
+.menu.active {
+   transform: translateX(0);
 }
 
 .nav {
@@ -50,6 +144,10 @@ body {
    list-style-type: none;
    padding-left: 0;
    margin: 0;
+
+   @media (max-width: 768px) {
+      display: block;
+   }
 
    &__item {
       margin-left: 23px;
@@ -73,6 +171,10 @@ h1 {
    font-weight: 300;
    position: relative;
    padding: 20px 35px;
+
+   @media (max-width: 992px) {
+      font-size: 50px;
+   }
 
    &::before,
    &::after {
@@ -105,6 +207,10 @@ h2 {
    font-weight: 500;
    margin-top: 0;
    margin-bottom: 20px;
+
+   @media (max-width: 992px) {
+      font-size: 40px;
+   }
 }
 
 .btn-scroll {
@@ -118,12 +224,21 @@ h2 {
    padding-top: 240px;
    padding-bottom: 132px;
 
+   @media (max-width: 992px) {
+      padding-top: 210px;
+      padding-bottom: 100px;
+   }
+
    h2 {
       margin-top: 0;
       margin-bottom: 20px;
       margin-top: 12px;
       font-size: 48px;
       font-weight: 400;
+
+      @media (max-width: 992px) {
+         font-size: 40px;
+      }
    }
 }
 
@@ -242,6 +357,11 @@ h2 {
    padding-top: 120px;
    padding-bottom: 100px;
 
+   @media (max-width: 992px) {
+      padding-top: 90px;
+      padding-bottom: 70px;
+   }
+
    .after-title {
       font-size: 16px;
       color: $text;
@@ -340,8 +460,8 @@ h2 {
 }
 
 .section-portfolio {
-   padding-top: 123px;
-   padding-bottom: 161px;
+   padding-top: 90px;
+   padding-bottom: 100px;
 }
 
 .portfolio {
@@ -349,6 +469,10 @@ h2 {
    grid-template: repeat(7, 88px) / 1fr 1fr 1fr;
    grid-gap: 40px;
    margin-top: 83px;
+
+   @media (max-width: 992px) {
+      margin-top: 60px;
+   }
 
    &-01 {
       grid-column: 1/2;
@@ -422,6 +546,11 @@ h2 {
    color: #fff;
    text-align: center;
 
+   @media (max-width: 992px) {
+      padding-top: 50px;
+      padding-bottom: 90px;
+   }
+
    .before-title {
       font-size: 22px;
       margin-bottom: 0;
@@ -431,6 +560,10 @@ h2 {
       font-size: 48px;
       margin-top: 15px;
       margin-bottom: 42px;
+
+      @media (max-width: 992px) {
+         font-size: 40px;
+      }
    }
 
    .btn {
@@ -450,6 +583,11 @@ h2 {
 .section-feedback {
    padding-top: 122px;
    padding-bottom: 158px;
+
+   @media (max-width: 992px) {
+      padding-top: 90px;
+      padding-bottom: 100px;
+   }
 }
 
 .feedback {
@@ -514,6 +652,11 @@ h2 {
    padding-top: 100px;
    padding-bottom: 82px;
    background-color: $light;
+
+   @media (max-width: 992px) {
+      padding-top: 80px;
+      padding-bottom: 60px;
+   }
 }
 
 .advantages {
@@ -568,6 +711,11 @@ h2 {
 .section-form {
    padding-top: 122px;
    padding-bottom: 130px;
+
+   @media (max-width: 992px) {
+      padding-top: 90px;
+      padding-bottom: 100px;
+   }
 }
 
 .form {
@@ -603,6 +751,11 @@ footer {
    background-color: $dark;
    padding-top: 64px;
    padding-bottom: 69px;
+
+   @media (max-width: 992px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+   }
 }
 
 .footer {
