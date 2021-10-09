@@ -20,6 +20,11 @@ body {
 .text-center {
   text-align: center;
 }
+@media (max-width: 768px) {
+  .text-center {
+    margin-top: 0px;
+  }
+}
 
 .main {
   background-image: url(../img/bg.jpg);
@@ -186,6 +191,12 @@ h1 {
     margin: 90px 0;
   }
 }
+@media (max-width: 400px) {
+  h1 {
+    font-size: 38px;
+    margin: 70px 0;
+  }
+}
 h1::before, h1::after {
   content: "";
   position: absolute;
@@ -229,6 +240,12 @@ h2 {
     margin-bottom: 15px;
   }
 }
+@media (max-width: 360px) {
+  h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+}
 
 .btn-scroll {
   background-color: transparent;
@@ -265,6 +282,12 @@ h2 {
     padding-bottom: 35px;
   }
 }
+@media (max-width: 400px) {
+  .section-about {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+}
 .section-about h2 {
   margin-top: 0;
   margin-bottom: 20px;
@@ -281,6 +304,12 @@ h2 {
   .section-about h2 {
     font-size: 35px;
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 360px) {
+  .section-about h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
   }
 }
 
@@ -341,6 +370,12 @@ h2 {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 48px;
+}
+@media (max-width: 360px) {
+  .box-about__text {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .progress-bar {
@@ -411,9 +446,20 @@ h2 {
     padding-bottom: 25px;
   }
 }
+@media (max-width: 360px) {
+  .section-services {
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+}
 .section-services .after-title {
   font-size: 16px;
   color: #7f7f82;
+}
+@media (max-width: 360px) {
+  .section-services .after-title {
+    margin-top: 0px;
+  }
 }
 
 .service {
@@ -435,6 +481,13 @@ h2 {
     margin-top: 50px;
   }
 }
+@media (max-width: 360px) {
+  .service {
+    grid-template: 1fr 1fr/1fr;
+    grid-gap: 20px 30px;
+    margin-top: 30px;
+  }
+}
 .service-item:hover .service__link-text {
   width: inherit;
   opacity: 1;
@@ -445,12 +498,22 @@ h2 {
   font-weight: 400;
   margin-bottom: 18px;
 }
+@media (max-width: 360px) {
+  .service h3 {
+    margin-bottom: 12px;
+  }
+}
 .service-icon {
   display: block;
   width: 44px;
   height: 37px;
   background-repeat: no-repeat;
   margin-bottom: 30px;
+}
+@media (max-width: 360px) {
+  .service-icon {
+    margin-bottom: 20px;
+  }
 }
 .service__design {
   background-image: url(../img/service-icon01.png);
@@ -481,6 +544,12 @@ h2 {
   font-size: 14px;
   line-height: 1.8;
 }
+@media (max-width: 360px) {
+  .service__text {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+}
 .service__link {
   color: #22222b;
   font-size: 14px;
@@ -490,6 +559,12 @@ h2 {
   justify-content: flex-start;
   align-items: center;
   height: 60px;
+}
+@media (max-width: 360px) {
+  .service__link {
+    align-items: flex-start;
+    height: 40px;
+  }
 }
 .service__link-text {
   width: 0;
@@ -519,6 +594,12 @@ h2 {
     padding-bottom: 50px;
   }
 }
+@media (max-width: 360px) {
+  .section-portfolio {
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+}
 
 .portfolio {
   display: grid;
@@ -541,6 +622,12 @@ h2 {
   .portfolio {
     grid-gap: 20px;
     margin-top: 30px;
+  }
+}
+@media (max-width: 360px) {
+  .portfolio {
+    grid-gap: 10px;
+    margin-top: 25px;
   }
 }
 .portfolio-01 {
@@ -629,6 +716,12 @@ h2 {
   font-size: 22px;
   margin-bottom: 0;
 }
+@media (max-width: 360px) {
+  .section-banner .before-title {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+}
 .section-banner h2 {
   font-size: 48px;
   margin-top: 15px;
@@ -647,6 +740,12 @@ h2 {
 @media (max-width: 480px) {
   .section-banner h2 {
     font-size: 30px;
+  }
+}
+@media (max-width: 360px) {
+  .section-banner h2 {
+    font-size: 26px;
+    margin-bottom: 35px;
   }
 }
 .section-banner .btn {
@@ -683,6 +782,12 @@ h2 {
     padding-bottom: 30px;
   }
 }
+@media (max-width: 360px) {
+  .section-feedback {
+    padding-top: 40px;
+    padding-bottom: 15px;
+  }
+}
 
 .feedback {
   display: flex;
@@ -694,15 +799,34 @@ h2 {
     margin-top: 50px;
   }
 }
+@media (max-width: 480px) {
+  .feedback {
+    margin-top: 0px;
+    flex-wrap: wrap;
+  }
+}
 .feedback-item {
   flex: 0 0 47%;
   max-width: 47%;
+}
+@media (max-width: 480px) {
+  .feedback-item {
+    margin-top: 25px;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 .feedback-top {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 56px;
+}
+@media (max-width: 360px) {
+  .feedback-top {
+    margin-bottom: 20px;
+    justify-content: center;
+  }
 }
 .feedback-thumb {
   margin-right: 10px;
@@ -780,6 +904,11 @@ h2 {
   font-size: 16px;
   text-transform: uppercase;
 }
+@media (max-width: 360px) {
+  .advantages__title {
+    font-size: 15px;
+  }
+}
 .advantages__title span {
   display: block;
   font-size: 22px;
@@ -795,6 +924,11 @@ h2 {
   margin-bottom: 27px;
   background-position: center center;
   background-repeat: no-repeat;
+}
+@media (max-width: 360px) {
+  .advantages__icon {
+    margin-bottom: 20px;
+  }
 }
 .advantages__icon-01 {
   background-image: url(../img/icon-01.png);
@@ -835,6 +969,12 @@ h2 {
     padding-bottom: 50px;
   }
 }
+@media (max-width: 360px) {
+  .section-form {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 
 .form {
   display: flex;
@@ -855,6 +995,11 @@ h2 {
   text-align: center;
   margin-bottom: 15px;
   transition: 0.3s;
+}
+@media (max-width: 480px) {
+  .form__input, .form__textarea {
+    padding: 10px 25px;
+  }
 }
 .form__input:focus, .form__textarea:focus {
   outline: none;
@@ -883,6 +1028,12 @@ footer {
     padding-bottom: 30px;
   }
 }
+@media (max-width: 360px) {
+  footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
 
 .footer {
   display: flex;
@@ -901,6 +1052,12 @@ footer {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 360px) {
+  .footer span {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+}
 
 .social-network {
   display: flex;
@@ -917,6 +1074,38 @@ footer {
 }
 .social-network__link:hover {
   color: silver;
+}
+
+@media (max-width: 360px) {
+  .portfolio-01 {
+    grid-column: 1/4;
+    grid-row: 1/4;
+  }
+
+  .portfolio-02 {
+    grid-column: 1/4;
+    grid-row: 4/7;
+  }
+
+  .portfolio-03 {
+    grid-column: 1/4;
+    grid-row: 7/27;
+  }
+
+  .portfolio-04 {
+    grid-column: 1/4;
+    grid-row: 27/56;
+  }
+
+  .portfolio-05 {
+    grid-column: 1/4;
+    grid-row: 56/85;
+  }
+
+  .portfolio-06 {
+    grid-column: 1/4;
+    grid-row: 85/114;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
